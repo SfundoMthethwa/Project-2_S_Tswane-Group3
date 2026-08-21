@@ -1,0 +1,2623 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>CampusGig - Settings</title>
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+
+    <style>
+       /* =================================
+   CAMPUSGIG SETTINGS
+   MODERN RESPONSIVE DESIGN
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+
+    --blue: #1A3C5E;
+
+    --blue-light: #2F5F8F;
+
+    --blue-pale: #EAF2F8;
+
+    --gold: #FFC107;
+
+    --gold-light: #FFF4CC;
+
+    --green: #28A745;
+
+    --red: #DC3545;
+
+    --white: #FFFFFF;
+
+    --background: #F4F7FA;
+
+    --text: #243447;
+
+    --muted: #718096;
+
+    --border: #E2E8F0;
+}
+
+
+body {
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background: var(--background);
+
+    color: var(--text);
+
+    min-height: 100vh;
+
+    display: flex;
+}
+
+/* =================================
+   MAIN
+================================= */
+
+.main-content {
+
+    width: 100%;
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 32px;
+}
+
+
+/* =================================
+   HEADER
+================================= */
+
+.top-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 25px;
+}
+
+
+.top-header h1 {
+
+    color: var(--blue);
+
+    font-size: 32px;
+
+    margin-bottom: 5px;
+}
+
+
+.top-header p {
+
+    color: var(--muted);
+
+    font-size: 14px;
+}
+
+
+.user-area {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    background: white;
+
+    padding: 8px 14px 8px 8px;
+
+    border-radius: 30px;
+
+    box-shadow:
+        0 2px 8px
+        rgba(0,0,0,0.05);
+}
+
+
+.avatar {
+
+    width: 42px;
+
+    height: 42px;
+
+    border-radius: 50%;
+
+    background: var(--blue);
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-weight: bold;
+
+    font-size: 18px;
+}
+
+
+.user-details strong {
+
+    display: block;
+
+    color: var(--blue);
+
+    font-size: 14px;
+}
+
+
+.user-details small {
+
+    display: block;
+
+    color: var(--muted);
+
+    margin-top: 3px;
+
+    font-size: 11px;
+}
+
+
+/* =================================
+   MESSAGE
+================================= */
+
+.message {
+
+    display: none;
+
+    padding: 13px 17px;
+
+    border-radius: 8px;
+
+    margin-bottom: 20px;
+
+    font-size: 14px;
+
+    font-weight: bold;
+}
+
+
+.message.show {
+
+    display: block;
+}
+
+
+.message.success {
+
+    background: #E8F7EC;
+
+    color: #1E7E34;
+
+    border-left:
+        4px solid var(--green);
+}
+
+
+.message.error {
+
+    background: #FDECEC;
+
+    color: #B02A37;
+
+    border-left:
+        4px solid var(--red);
+}
+
+
+/* =================================
+   CARDS
+================================= */
+
+.settings-card {
+
+    background: white;
+
+    border-radius: 12px;
+
+    padding: 27px;
+
+    margin-bottom: 20px;
+
+    border: 1px solid var(--border);
+
+    box-shadow:
+        0 3px 12px
+        rgba(0,0,0,0.045);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.settings-card:hover {
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 6px 18px
+        rgba(0,0,0,0.07);
+}
+
+
+/* =================================
+   CARD HEADER
+================================= */
+
+.card-header {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    margin-bottom: 25px;
+}
+
+
+.card-icon {
+
+    width: 46px;
+
+    height: 46px;
+
+    border-radius: 10px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 21px;
+
+    flex-shrink: 0;
+}
+
+
+/* STUDENT ICON */
+
+.student-icon {
+
+    background: var(--blue-pale);
+
+    color: var(--blue);
+
+    border:
+        1px solid #D4E3EF;
+}
+
+
+/* EMPLOYER ICON */
+
+.employer-icon {
+
+    background: var(--gold-light);
+
+    color: #8A6800;
+
+    border:
+        1px solid #F0D778;
+}
+
+
+.card-header h2 {
+
+    color: var(--blue);
+
+    font-size: 19px;
+
+    margin-bottom: 4px;
+}
+
+
+.card-header p {
+
+    color: var(--muted);
+
+    font-size: 13px;
+}
+
+
+/* =================================
+   FORM
+================================= */
+
+.form-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 19px;
+}
+
+
+.form-group {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+
+.form-group.full-width {
+
+    grid-column:
+        1 / -1;
+}
+
+
+.form-group label {
+
+    color: var(--text);
+
+    font-size: 13px;
+
+    font-weight: bold;
+}
+
+
+.form-group input {
+
+    width: 100%;
+
+    height: 44px;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 7px;
+
+    padding: 0 13px;
+
+    font-size: 14px;
+
+    color: var(--text);
+
+    background: #FAFCFE;
+
+    outline: none;
+
+    transition: 0.2s;
+}
+
+
+.form-group input:focus {
+
+    background: white;
+
+    border-color: var(--blue);
+
+    box-shadow:
+        0 0 0 3px
+        rgba(26,60,94,0.08);
+}
+
+
+.form-group input.error-input {
+
+    border-color: var(--red);
+
+    background: #FFF8F8;
+}
+
+
+.form-group small {
+
+    color: var(--muted);
+
+    font-size: 11px;
+}
+
+
+/* =================================
+   PASSWORD
+================================= */
+
+.password-field {
+
+    position: relative;
+
+    width: 100%;
+}
+
+
+.password-field input {
+
+    padding-right: 45px;
+}
+
+
+.password-field button {
+
+    position: absolute;
+
+    right: 5px;
+
+    top: 4px;
+
+    width: 36px;
+
+    height: 36px;
+
+    border: none;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    border-radius: 5px;
+}
+
+
+.password-field button:hover {
+
+    background: var(--blue-pale);
+}
+
+
+/* =================================
+   SAVE BUTTONS
+================================= */
+
+.save-button {
+
+    margin-top: 25px;
+
+    padding: 12px 20px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+
+/* STUDENT SAVE = BLUE */
+
+.student-save {
+
+    background: var(--blue);
+
+    color: white;
+}
+
+
+.student-save:hover {
+
+    background: var(--blue-light);
+
+    transform: translateY(-1px);
+}
+
+
+/* EMPLOYER SAVE = GOLD */
+
+.employer-save {
+
+    background: var(--gold);
+
+    color: var(--blue);
+}
+
+
+.employer-save:hover {
+
+    background: #E5AC00;
+
+    transform: translateY(-1px);
+}
+
+
+/* =================================
+   SETTINGS ROW
+================================= */
+
+.setting-row {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 17px 0;
+
+    border-top:
+        1px solid #EDF0F3;
+}
+
+
+.setting-row strong {
+
+    color: var(--blue);
+
+    font-size: 14px;
+}
+
+
+.setting-row p {
+
+    color: var(--muted);
+
+    font-size: 12px;
+
+    margin-top: 5px;
+
+    line-height: 1.5;
+}
+
+
+/* =================================
+   TOGGLE
+================================= */
+
+.toggle {
+
+    position: relative;
+
+    width: 50px;
+
+    height: 27px;
+
+    flex-shrink: 0;
+}
+
+
+.toggle input {
+
+    display: none;
+}
+
+
+.toggle span {
+
+    position: absolute;
+
+    inset: 0;
+
+    background: #CBD5E0;
+
+    border-radius: 20px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.toggle span::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 21px;
+
+    height: 21px;
+
+    left: 3px;
+
+    top: 3px;
+
+    background: white;
+
+    border-radius: 50%;
+
+    transition: 0.2s;
+
+    box-shadow:
+        0 1px 3px
+        rgba(0,0,0,0.2);
+}
+
+
+.toggle input:checked + span {
+
+    background: var(--blue);
+}
+
+
+.toggle input:checked + span::before {
+
+    transform: translateX(23px);
+}
+
+
+/* =================================
+   HIDDEN
+================================= */
+
+.hidden {
+
+    display: none;
+}
+
+
+/* =================================
+   TABLET
+================================= */
+
+@media (max-width: 850px) {
+
+
+
+    .logo {
+
+        font-size: 16px;
+
+        margin-bottom: 30px;
+    }
+
+
+    nav a {
+
+        justify-content: center;
+
+        font-size: 0;
+
+        padding: 13px 5px;
+    }
+
+
+    nav a span {
+
+        display: none;
+    }
+
+
+    .logout-button {
+
+        font-size: 0;
+    }
+
+
+    .main-content {
+
+        padding: 22px;
+    }
+
+
+    .account-switch-section {
+
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+
+    .account-buttons {
+
+        width: 100%;
+    }
+
+
+    .account-button {
+
+        flex: 1;
+
+        justify-content: center;
+    }
+
+}
+
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 600px) {
+
+    .main-content {
+
+        padding: 15px;
+    }
+
+
+    .top-header {
+
+        align-items: flex-start;
+    }
+
+
+    .top-header h1 {
+
+        font-size: 25px;
+    }
+
+
+    .user-area {
+
+        display: none;
+    }
+
+
+    .account-switch-section {
+
+        padding: 19px;
+    }
+
+
+    .account-buttons {
+
+        flex-direction: column;
+    }
+
+
+    .account-button {
+
+        width: 100%;
+    }
+
+
+    .settings-card {
+
+        padding: 19px;
+    }
+
+
+    .form-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .form-group.full-width {
+
+        grid-column: auto;
+    }
+
+
+    .card-header {
+
+        align-items: flex-start;
+    }
+
+
+    .setting-row {
+
+        align-items: flex-start;
+    }
+
+
+    .save-button {
+
+        width: 100%;
+    }
+
+}
+
+
+/* =================================
+   VERY SMALL PHONE
+================================= */
+
+@media (max-width: 380px) {
+
+    .main-content {
+
+        padding: 10px;
+    }
+
+
+    .settings-card {
+
+        padding: 15px;
+    }
+
+
+    .top-header h1 {
+
+        font-size: 22px;
+    }
+}
+    </style>
+</head>
+
+<body>
+
+<!-- =================================
+     MAIN CONTENT
+================================= -->
+
+<main class="main-content">
+
+
+    <!-- HEADER -->
+
+    <header class="top-header">
+
+        <div>
+
+            <h1>Settings</h1>
+
+            <p>
+                Manage your CampusGig account
+                and preferences.
+            </p>
+
+        </div>
+
+
+        <div class="user-area">
+
+            <div class="avatar"
+                 id="avatar">
+
+                S
+
+            </div>
+
+
+            <div class="user-details">
+
+                <strong id="headerName">
+                    CampusGig User
+                </strong>
+
+                <small id="headerRole">
+                    Account Settings
+                </small>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =================================
+         MESSAGE
+    ================================= -->
+
+    <div id="message"
+         class="message">
+
+    </div>
+
+<!-- =================================
+         STUDENT SETTINGS
+    ================================= -->
+
+    <section id="studentSettings"
+             class="settings-container">
+
+
+        <!-- STUDENT PROFILE -->
+
+        <div class="settings-card">
+
+
+            <div class="card-header">
+
+                <div class="card-icon student-icon">
+                    🎓
+                </div>
+
+
+                <div>
+
+                    <h2>Student Profile</h2>
+
+                    <p>
+                        Manage your personal and
+                        academic information.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="form-grid">
+
+
+                <div class="form-group">
+
+                    <label for="studentName">
+                        Full Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="studentName"
+                        placeholder="Enter your full name">
+
+                </div>
+
+
+
+                <div class="form-group">
+
+                    <label for="studentEmail">
+                        Email Address
+                    </label>
+
+                    <input
+                        type="email"
+                        id="studentEmail"
+                        placeholder="Enter your email">
+
+                </div>
+
+
+
+                <div class="form-group">
+
+                    <label for="studentNumber">
+                        Student Number
+                    </label>
+
+                    <input
+                        type="text"
+                        id="studentNumber"
+                        placeholder="Enter student number">
+
+                </div>
+
+
+
+                <div class="form-group">
+
+                    <label for="studentCourse">
+                        Course
+                    </label>
+
+                    <input
+                        type="text"
+                        id="studentCourse"
+                        placeholder="Enter your course">
+
+                </div>
+
+
+
+                <div class="form-group full-width">
+
+                    <label for="studentSkills">
+                        Skills
+                    </label>
+
+                    <input
+                        type="text"
+                        id="studentSkills"
+                        placeholder="Example: Java, HTML, SQL">
+
+                    <small>
+                        Separate your skills with commas.
+                    </small>
+
+                </div>
+
+
+            </div>
+
+
+
+            <button class="save-button student-save"
+                    onclick="saveStudent()">
+
+                💾 Save Student Information
+
+            </button>
+
+        </div>
+
+
+
+        <!-- STUDENT SECURITY -->
+
+        <div class="settings-card">
+
+
+            <div class="card-header">
+
+                <div class="card-icon student-icon">
+                    🔒
+                </div>
+
+
+                <div>
+
+                    <h2>Security</h2>
+
+                    <p>
+                        Update your CampusGig password.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="form-grid">
+
+
+                <div class="form-group">
+
+                    <label>
+                        Current Password
+                    </label>
+
+
+                    <div class="password-field">
+
+                        <input
+                            type="password"
+                            id="studentCurrentPassword"
+                            placeholder="Current password">
+
+                        <button
+                            type="button"
+                            onclick="togglePassword('studentCurrentPassword', this)">
+
+                            👁️
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="form-group">
+
+                    <label>
+                        New Password
+                    </label>
+
+
+                    <div class="password-field">
+
+                        <input
+                            type="password"
+                            id="studentNewPassword"
+                            placeholder="New password">
+
+                        <button
+                            type="button"
+                            onclick="togglePassword('studentNewPassword', this)">
+
+                            👁️
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="form-group">
+
+                    <label>
+                        Confirm Password
+                    </label>
+
+
+                    <div class="password-field">
+
+                        <input
+                            type="password"
+                            id="studentConfirmPassword"
+                            placeholder="Confirm password">
+
+                        <button
+                            type="button"
+                            onclick="togglePassword('studentConfirmPassword', this)">
+
+                            👁️
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+
+            <button class="save-button student-save"
+                    onclick="changeStudentPassword()">
+
+                🔒 Change Password
+
+            </button>
+
+        </div>
+
+
+
+        <!-- STUDENT NOTIFICATIONS -->
+
+        <div class="settings-card">
+
+
+            <div class="card-header">
+
+                <div class="card-icon student-icon">
+                    🔔
+                </div>
+
+
+                <div>
+
+                    <h2>Notifications</h2>
+
+                    <p>
+                        Control the notifications you receive.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="setting-row">
+
+
+                <div>
+
+                    <strong>
+                        Job Notifications
+                    </strong>
+
+                    <p>
+                        Receive notifications about
+                        suitable job opportunities.
+                    </p>
+
+                </div>
+
+
+                <label class="toggle">
+
+                    <input
+                        type="checkbox"
+                        id="studentJobNotifications"
+                        onchange="saveNotificationSettings()">
+
+                    <span></span>
+
+                </label>
+
+
+            </div>
+
+
+
+            <div class="setting-row">
+
+
+                <div>
+
+                    <strong>
+                        Application Updates
+                    </strong>
+
+                    <p>
+                        Receive updates about your
+                        job applications.
+                    </p>
+
+                </div>
+
+
+                <label class="toggle">
+
+                    <input
+                        type="checkbox"
+                        id="studentApplicationNotifications"
+                        onchange="saveNotificationSettings()">
+
+                    <span></span>
+
+                </label>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================
+         EMPLOYER SETTINGS
+    ================================= -->
+
+    <section id="employerSettings"
+             class="settings-container hidden">
+
+
+        <!-- EMPLOYER PROFILE -->
+
+        <div class="settings-card">
+
+
+            <div class="card-header">
+
+                <div class="card-icon employer-icon">
+                    🏢
+                </div>
+
+
+                <div>
+
+                    <h2>Employer Profile</h2>
+
+                    <p>
+                        Manage your company information.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="form-grid">
+
+
+                <div class="form-group">
+
+                    <label for="companyName">
+                        Company Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="companyName"
+                        placeholder="Enter company name">
+
+                </div>
+
+
+
+                <div class="form-group">
+
+                    <label for="employerEmail">
+                        Email Address
+                    </label>
+
+                    <input
+                        type="email"
+                        id="employerEmail"
+                        placeholder="Enter company email">
+
+                </div>
+
+
+
+                <div class="form-group">
+
+                    <label for="industry">
+                        Industry
+                    </label>
+
+                    <input
+                        type="text"
+                        id="industry"
+                        placeholder="Example: Technology">
+
+                </div>
+
+
+
+                <div class="form-group">
+
+                    <label for="location">
+                        Location
+                    </label>
+
+                    <input
+                        type="text"
+                        id="location"
+                        placeholder="Example: Cape Town">
+
+                </div>
+
+
+
+                <div class="form-group">
+
+                    <label for="contactPerson">
+                        Contact Person
+                    </label>
+
+                    <input
+                        type="text"
+                        id="contactPerson"
+                        placeholder="Contact person">
+
+                </div>
+
+
+
+                <div class="form-group">
+
+                    <label for="phone">
+                        Phone Number
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="phone"
+                        placeholder="Phone number">
+
+                </div>
+
+
+            </div>
+
+
+
+            <button class="save-button employer-save"
+                    onclick="saveEmployer()">
+
+                💾 Save Employer Information
+
+            </button>
+
+        </div>
+
+
+
+        <!-- EMPLOYER SECURITY -->
+
+        <div class="settings-card">
+
+
+            <div class="card-header">
+
+                <div class="card-icon employer-icon">
+                    🔒
+                </div>
+
+
+                <div>
+
+                    <h2>Security</h2>
+
+                    <p>
+                        Update your employer account password.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="form-grid">
+
+
+                <div class="form-group">
+
+                    <label>
+                        Current Password
+                    </label>
+
+
+                    <div class="password-field">
+
+                        <input
+                            type="password"
+                            id="employerCurrentPassword"
+                            placeholder="Current password">
+
+                        <button
+                            type="button"
+                            onclick="togglePassword('employerCurrentPassword', this)">
+
+                            👁️
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="form-group">
+
+                    <label>
+                        New Password
+                    </label>
+
+
+                    <div class="password-field">
+
+                        <input
+                            type="password"
+                            id="employerNewPassword"
+                            placeholder="New password">
+
+                        <button
+                            type="button"
+                            onclick="togglePassword('employerNewPassword', this)">
+
+                            👁️
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="form-group">
+
+                    <label>
+                        Confirm Password
+                    </label>
+
+
+                    <div class="password-field">
+
+                        <input
+                            type="password"
+                            id="employerConfirmPassword"
+                            placeholder="Confirm password">
+
+                        <button
+                            type="button"
+                            onclick="togglePassword('employerConfirmPassword', this)">
+
+                            👁️
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+
+            <button class="save-button employer-save"
+                    onclick="changeEmployerPassword()">
+
+                🔒 Change Password
+
+            </button>
+
+        </div>
+
+
+
+        <!-- EMPLOYER NOTIFICATIONS -->
+
+        <div class="settings-card">
+
+
+            <div class="card-header">
+
+                <div class="card-icon employer-icon">
+                    🔔
+                </div>
+
+
+                <div>
+
+                    <h2>Notifications</h2>
+
+                    <p>
+                        Control employer notifications.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="setting-row">
+
+
+                <div>
+
+                    <strong>
+                        Application Notifications
+                    </strong>
+
+                    <p>
+                        Get notified when students
+                        apply for your jobs.
+                    </p>
+
+                </div>
+
+
+                <label class="toggle">
+
+                    <input
+                        type="checkbox"
+                        id="employerApplicationNotifications"
+                        onchange="saveNotificationSettings()">
+
+                    <span></span>
+
+                </label>
+
+
+            </div>
+
+
+
+            <div class="setting-row">
+
+
+                <div>
+
+                    <strong>
+                        Job Posting Updates
+                    </strong>
+
+                    <p>
+                        Receive updates about your
+                        job postings.
+                    </p>
+
+                </div>
+
+
+                <label class="toggle">
+
+                    <input
+                        type="checkbox"
+                        id="employerJobNotifications"
+                        onchange="saveNotificationSettings()">
+
+                    <span></span>
+
+                </label>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+</main>
+
+
+<script>
+   /* =================================
+   CAMPUSGIG SETTINGS JAVASCRIPT
+================================= */
+
+
+/* =================================
+   DEFAULT DATA
+================================= */
+
+const defaultStudent = {
+
+    name: "",
+    email: "",
+    studentNumber: "",
+    course: "",
+    skills: "",
+    jobNotifications: false,
+    applicationNotifications: false
+
+};
+
+
+const defaultEmployer = {
+
+    companyName: "",
+    email: "",
+    industry: "",
+    location: "",
+    contactPerson: "",
+    phone: "",
+    applicationNotifications: false,
+    jobNotifications: false
+
+};
+
+
+
+/* =================================
+   LOAD DATA
+================================= */
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
+
+        loadStudentData();
+
+        loadEmployerData();
+
+        loadNotificationSettings();
+
+    }
+);
+
+
+
+/* =================================
+   STUDENT
+================================= */
+
+function loadStudentData() {
+
+    let student =
+        JSON.parse(
+            localStorage.getItem(
+                "campusGigStudentSettings"
+            )
+        );
+
+
+    if (!student) {
+
+        student = defaultStudent;
+
+        localStorage.setItem(
+            "campusGigStudentSettings",
+            JSON.stringify(student)
+        );
+
+    }
+
+
+    document.getElementById(
+        "studentName"
+    ).value = student.name;
+
+
+    document.getElementById(
+        "studentEmail"
+    ).value = student.email;
+
+
+    document.getElementById(
+        "studentNumber"
+    ).value = student.studentNumber;
+
+
+    document.getElementById(
+        "studentCourse"
+    ).value = student.course;
+
+
+    document.getElementById(
+        "studentSkills"
+    ).value = student.skills;
+}
+
+
+
+/* =================================
+   SAVE STUDENT
+================================= */
+
+function saveStudent() {
+
+    clearErrors();
+
+
+    const name =
+        document
+            .getElementById("studentName")
+            .value
+            .trim();
+
+
+    const email =
+        document
+            .getElementById("studentEmail")
+            .value
+            .trim();
+
+
+    const studentNumber =
+        document
+            .getElementById("studentNumber")
+            .value
+            .trim();
+
+
+    const course =
+        document
+            .getElementById("studentCourse")
+            .value
+            .trim();
+
+
+    const skills =
+        document
+            .getElementById("studentSkills")
+            .value
+            .trim();
+
+
+
+    if (name === "") {
+
+        showError(
+            "Please enter your full name."
+        );
+
+        highlight("studentName");
+
+        return;
+    }
+
+
+    if (!isValidEmail(email)) {
+
+        showError(
+            "Please enter a valid email address."
+        );
+
+        highlight("studentEmail");
+
+        return;
+    }
+
+
+    if (studentNumber === "") {
+
+        showError(
+            "Please enter your student number."
+        );
+
+        highlight("studentNumber");
+
+        return;
+    }
+
+
+    if (course === "") {
+
+        showError(
+            "Please enter your course."
+        );
+
+        highlight("studentCourse");
+
+        return;
+    }
+
+
+    if (skills === "") {
+
+        showError(
+            "Please enter at least one skill."
+        );
+
+        highlight("studentSkills");
+
+        return;
+    }
+
+
+
+    const student = {
+
+        name: name,
+
+        email: email,
+
+        studentNumber: studentNumber,
+
+        course: course,
+
+        skills: skills,
+
+        jobNotifications:
+            document
+                .getElementById(
+                    "studentJobNotifications"
+                ).checked,
+
+        applicationNotifications:
+            document
+                .getElementById(
+                    "studentApplicationNotifications"
+                ).checked
+
+    };
+
+
+    localStorage.setItem(
+        "campusGigStudentSettings",
+        JSON.stringify(student)
+    );
+
+
+    updateHeader(
+        student.name || "CampusGig User",
+        "Account Settings",
+        student.name ? student.name.charAt(0).toUpperCase() : "C"
+    );
+
+
+    showSuccess(
+        "Student information saved successfully."
+    );
+}
+
+
+
+/* =================================
+   EMPLOYER
+================================= */
+
+function loadEmployerData() {
+
+    let employer =
+        JSON.parse(
+            localStorage.getItem(
+                "campusGigEmployerSettings"
+            )
+        );
+
+
+    if (!employer) {
+
+        employer = defaultEmployer;
+
+        localStorage.setItem(
+            "campusGigEmployerSettings",
+            JSON.stringify(employer)
+        );
+
+    }
+
+
+    document.getElementById(
+        "companyName"
+    ).value = employer.companyName;
+
+
+    document.getElementById(
+        "employerEmail"
+    ).value = employer.email;
+
+
+    document.getElementById(
+        "industry"
+    ).value = employer.industry;
+
+
+    document.getElementById(
+        "location"
+    ).value = employer.location;
+
+
+    document.getElementById(
+        "contactPerson"
+    ).value = employer.contactPerson;
+
+
+    document.getElementById(
+        "phone"
+    ).value = employer.phone;
+}
+
+
+
+/* =================================
+   SAVE EMPLOYER
+================================= */
+
+function saveEmployer() {
+
+    clearErrors();
+
+
+    const companyName =
+        document
+            .getElementById("companyName")
+            .value
+            .trim();
+
+
+    const email =
+        document
+            .getElementById("employerEmail")
+            .value
+            .trim();
+
+
+    const industry =
+        document
+            .getElementById("industry")
+            .value
+            .trim();
+
+
+    const location =
+        document
+            .getElementById("location")
+            .value
+            .trim();
+
+
+    const contactPerson =
+        document
+            .getElementById("contactPerson")
+            .value
+            .trim();
+
+
+    const phone =
+        document
+            .getElementById("phone")
+            .value
+            .trim();
+
+
+
+    if (companyName === "") {
+
+        showError(
+            "Please enter the company name."
+        );
+
+        highlight("companyName");
+
+        return;
+    }
+
+
+    if (!isValidEmail(email)) {
+
+        showError(
+            "Please enter a valid company email."
+        );
+
+        highlight("employerEmail");
+
+        return;
+    }
+
+
+    if (industry === "") {
+
+        showError(
+            "Please enter the industry."
+        );
+
+        highlight("industry");
+
+        return;
+    }
+
+
+    if (location === "") {
+
+        showError(
+            "Please enter the company location."
+        );
+
+        highlight("location");
+
+        return;
+    }
+
+
+    if (contactPerson === "") {
+
+        showError(
+            "Please enter a contact person."
+        );
+
+        highlight("contactPerson");
+
+        return;
+    }
+
+
+    if (phone === "") {
+
+        showError(
+            "Please enter a phone number."
+        );
+
+        highlight("phone");
+
+        return;
+    }
+
+
+
+    const employer = {
+
+        companyName: companyName,
+
+        email: email,
+
+        industry: industry,
+
+        location: location,
+
+        contactPerson: contactPerson,
+
+        phone: phone,
+
+        applicationNotifications:
+            document
+                .getElementById(
+                    "employerApplicationNotifications"
+                ).checked,
+
+        jobNotifications:
+            document
+                .getElementById(
+                    "employerJobNotifications"
+                ).checked
+
+    };
+
+
+    localStorage.setItem(
+        "campusGigEmployerSettings",
+        JSON.stringify(employer)
+    );
+
+
+    updateHeader(
+        employer.companyName || "CampusGig User",
+        "Account Settings",
+        employer.companyName ? employer.companyName.charAt(0).toUpperCase() : "C"
+    );
+
+
+    showSuccess(
+        "Employer information saved successfully."
+    );
+}
+
+/* =================================
+   HEADER
+================================= */
+
+function updateHeader(
+    name,
+    role,
+    letter
+) {
+
+    document.getElementById(
+        "headerName"
+    ).textContent = name;
+
+
+    document.getElementById(
+        "headerRole"
+    ).textContent = role;
+
+
+    document.getElementById(
+        "avatar"
+    ).textContent = letter;
+}
+
+
+
+/* =================================
+   PASSWORD
+================================= */
+
+function changeStudentPassword() {
+
+    const current =
+        document
+            .getElementById(
+                "studentCurrentPassword"
+            ).value;
+
+
+    const newPassword =
+        document
+            .getElementById(
+                "studentNewPassword"
+            ).value;
+
+
+    const confirmPassword =
+        document
+            .getElementById(
+                "studentConfirmPassword"
+            ).value;
+
+
+
+    if (
+        current === "" ||
+        newPassword === "" ||
+        confirmPassword === ""
+    ) {
+
+        showError(
+            "Please complete all password fields."
+        );
+
+        return;
+    }
+
+
+    if (newPassword.length < 6) {
+
+        showError(
+            "New password must contain at least 6 characters."
+        );
+
+        return;
+    }
+
+
+    if (newPassword !== confirmPassword) {
+
+        showError(
+            "New passwords do not match."
+        );
+
+        return;
+    }
+
+
+    localStorage.setItem(
+        "campusGigStudentSettingsPassword",
+        newPassword
+    );
+
+
+    document.getElementById(
+        "studentCurrentPassword"
+    ).value = "";
+
+
+    document.getElementById(
+        "studentNewPassword"
+    ).value = "";
+
+
+    document.getElementById(
+        "studentConfirmPassword"
+    ).value = "";
+
+
+    showSuccess(
+        "Student password changed successfully."
+    );
+}
+
+
+
+function changeEmployerPassword() {
+
+    const current =
+        document
+            .getElementById(
+                "employerCurrentPassword"
+            ).value;
+
+
+    const newPassword =
+        document
+            .getElementById(
+                "employerNewPassword"
+            ).value;
+
+
+    const confirmPassword =
+        document
+            .getElementById(
+                "employerConfirmPassword"
+            ).value;
+
+
+
+    if (
+        current === "" ||
+        newPassword === "" ||
+        confirmPassword === ""
+    ) {
+
+        showError(
+            "Please complete all password fields."
+        );
+
+        return;
+    }
+
+
+    if (newPassword.length < 6) {
+
+        showError(
+            "New password must contain at least 6 characters."
+        );
+
+        return;
+    }
+
+
+    if (newPassword !== confirmPassword) {
+
+        showError(
+            "New passwords do not match."
+        );
+
+        return;
+    }
+
+
+    localStorage.setItem(
+        "campusGigEmployerSettingsPassword",
+        newPassword
+    );
+
+
+    document.getElementById(
+        "employerCurrentPassword"
+    ).value = "";
+
+
+    document.getElementById(
+        "employerNewPassword"
+    ).value = "";
+
+
+    document.getElementById(
+        "employerConfirmPassword"
+    ).value = "";
+
+
+    showSuccess(
+        "Employer password changed successfully."
+    );
+}
+
+
+
+/* =================================
+   SHOW / HIDE PASSWORD
+================================= */
+
+function togglePassword(
+    inputId,
+    button
+) {
+
+    const input =
+        document.getElementById(inputId);
+
+
+    if (input.type === "password") {
+
+        input.type = "text";
+
+        button.textContent = "🙈";
+
+    } else {
+
+        input.type = "password";
+
+        button.textContent = "👁️";
+    }
+}
+
+
+
+/* =================================
+   NOTIFICATIONS
+================================= */
+
+function loadNotificationSettings() {
+
+    const student =
+        JSON.parse(
+            localStorage.getItem(
+                "campusGigStudentSettings"
+            )
+        ) || defaultStudent;
+
+
+    const employer =
+        JSON.parse(
+            localStorage.getItem(
+                "campusGigEmployerSettings"
+            )
+        ) || defaultEmployer;
+
+
+
+    document.getElementById(
+        "studentJobNotifications"
+    ).checked =
+        student.jobNotifications;
+
+
+    document.getElementById(
+        "studentApplicationNotifications"
+    ).checked =
+        student.applicationNotifications;
+
+
+    document.getElementById(
+        "employerApplicationNotifications"
+    ).checked =
+        employer.applicationNotifications;
+
+
+    document.getElementById(
+        "employerJobNotifications"
+    ).checked =
+        employer.jobNotifications;
+}
+
+
+
+function saveNotificationSettings() {
+
+    const student =
+        JSON.parse(
+            localStorage.getItem(
+                "campusGigStudentSettings"
+            )
+        ) || defaultStudent;
+
+
+    const employer =
+        JSON.parse(
+            localStorage.getItem(
+                "campusGigEmployerSettings"
+            )
+        ) || defaultEmployer;
+
+
+
+    student.jobNotifications =
+        document.getElementById(
+            "studentJobNotifications"
+        ).checked;
+
+
+    student.applicationNotifications =
+        document.getElementById(
+            "studentApplicationNotifications"
+        ).checked;
+
+
+
+    employer.applicationNotifications =
+        document.getElementById(
+            "employerApplicationNotifications"
+        ).checked;
+
+
+    employer.jobNotifications =
+        document.getElementById(
+            "employerJobNotifications"
+        ).checked;
+
+
+
+    localStorage.setItem(
+        "campusGigStudentSettings",
+        JSON.stringify(student)
+    );
+
+
+    localStorage.setItem(
+        "campusGigEmployerSettings",
+        JSON.stringify(employer)
+    );
+
+
+    showSuccess(
+        "Notification preferences saved."
+    );
+}
+
+
+
+/* =================================
+   EMAIL VALIDATION
+================================= */
+
+function isValidEmail(email) {
+
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+        .test(email);
+}
+
+
+
+/* =================================
+   ERROR HIGHLIGHT
+================================= */
+
+function highlight(id) {
+
+    const element =
+        document.getElementById(id);
+
+
+    element.classList.add(
+        "error-input"
+    );
+
+
+    element.focus();
+}
+
+
+
+/* =================================
+   CLEAR ERRORS
+================================= */
+
+function clearErrors() {
+
+    document
+        .querySelectorAll(".error-input")
+        .forEach(
+            function (element) {
+
+                element.classList.remove(
+                    "error-input"
+                );
+
+            }
+        );
+}
+
+
+
+/* =================================
+   SUCCESS MESSAGE
+================================= */
+
+function showSuccess(text) {
+
+    const message =
+        document.getElementById(
+            "message"
+        );
+
+
+    message.textContent =
+        "✓ " + text;
+
+
+    message.className =
+        "message show success";
+
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+
+
+    setTimeout(
+        function () {
+
+            clearMessage();
+
+        },
+        4000
+    );
+}
+
+
+
+/* =================================
+   ERROR MESSAGE
+================================= */
+
+function showError(text) {
+
+    const message =
+        document.getElementById(
+            "message"
+        );
+
+
+    message.textContent =
+        "⚠ " + text;
+
+
+    message.className =
+        "message show error";
+
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+}
+
+
+
+/* =================================
+   CLEAR MESSAGE
+================================= */
+
+function clearMessage() {
+
+    const message =
+        document.getElementById(
+            "message"
+        );
+
+
+    message.textContent = "";
+
+    message.className = "message";
+}
+
+</script>
+
+</body>
+
+</html>
